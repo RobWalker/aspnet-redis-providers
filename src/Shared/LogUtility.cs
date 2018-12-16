@@ -12,6 +12,8 @@ namespace Microsoft.Web.Redis
     internal static class LogUtility
     {
         public static TextWriter logger = null;
+        public static readonly log4net.ILog Log4 = log4net.LogManager.GetLogger("Az.AWSCredentials");
+
 
         public static void LogWarning(string msg, params object[] args)
         {
@@ -30,6 +32,11 @@ namespace Microsoft.Web.Redis
 
         private static void Log(string type, string msg, params object[] args)
         {
+            {
+                string msgToPrint = (args.Length > 0) ? string.Format(msg, args) : msg;
+                Log4.Info(msgToPrint);
+            }
+
             if (logger != null)
             {
                 string msgToPrint = (args.Length > 0) ? string.Format(msg, args) : msg;
