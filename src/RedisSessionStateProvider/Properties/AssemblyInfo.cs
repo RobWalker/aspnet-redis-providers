@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyMetadata("Serviceable", "True")]
+// ?? [assembly: AssemblyMetadata("Serviceable", "True")]
 
 #if !CODESIGNING
 [assembly: InternalsVisibleTo("Microsoft.Web.RedisSessionStateProvider.Unit.Tests")]
