@@ -27,7 +27,7 @@ namespace Microsoft.Web.Redis
 
         public static void LogInfo(string msg, params object[] args)
         {
-            Log("[Info]", msg, args);
+            // ** suppress ** Log("[Info]", msg, args);
         }
 
         private static void Log(string type, string msg, params object[] args)
